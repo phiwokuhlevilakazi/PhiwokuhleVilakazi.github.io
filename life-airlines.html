@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Life Airlines — Case Study | Phiwo Vilakazi</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCI+CiAgPCEtLSBCYWNrZ3JvdW5kIC0tPgogIDxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjMWExYTFhIi8+CiAgCiAgPCEtLSBQZXRhbHMgLSB0ZXJyYWNvdHRhIC0tPgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjI4IiByeD0iNyIgcnk9IjE0IiBmaWxsPSIjYzQ2MjJkIiBvcGFjaXR5PSIwLjkiLz4KICA8ZWxsaXBzZSBjeD0iNTAiIGN5PSI3MiIgcng9IjciIHJ5PSIxNCIgZmlsbD0iI2M0NjIyZCIgb3BhY2l0eT0iMC45Ii8+CiAgPGVsbGlwc2UgY3g9IjI4IiBjeT0iNTAiIHJ4PSIxNCIgcnk9IjciIGZpbGw9IiNjNDYyMmQiIG9wYWNpdHk9IjAuOSIvPgogIDxlbGxpcHNlIGN4PSI3MiIgY3k9IjUwIiByeD0iMTQiIHJ5PSI3IiBmaWxsPSIjYzQ2MjJkIiBvcGFjaXR5PSIwLjkiLz4KCiAgPCEtLSBEaWFnb25hbCBwZXRhbHMgLSBzbGlnaHRseSBsaWdodGVyIC0tPgogIDxlbGxpcHNlIGN4PSIzMiIgY3k9IjMyIiByeD0iNyIgcnk9IjE0IiBmaWxsPSIjZDQ3MzNlIiBvcGFjaXR5PSIwLjg1IiB0cmFuc2Zvcm09InJvdGF0ZSg0NSAzMiAzMikiLz4KICA8ZWxsaXBzZSBjeD0iNjgiIGN5PSIzMiIgcng9IjciIHJ5PSIxNCIgZmlsbD0iI2Q0NzMzZSIgb3BhY2l0eT0iMC44NSIgdHJhbnNmb3JtPSJyb3RhdGUoLTQ1IDY4IDMyKSIvPgogIDxlbGxpcHNlIGN4PSIzMiIgY3k9IjY4IiByeD0iNyIgcnk9IjE0IiBmaWxsPSIjZDQ3MzNlIiBvcGFjaXR5PSIwLjg1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNDUgMzIgNjgpIi8+CiAgPGVsbGlwc2UgY3g9IjY4IiBjeT0iNjgiIHJ4PSI3IiByeT0iMTQiIGZpbGw9IiNkNDczM2UiIG9wYWNpdHk9IjAuODUiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDY4IDY4KSIvPgoKICA8IS0tIENlbnRyZSBjaXJjbGUgLS0+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iMTIiIGZpbGw9IiNmN2Y0ZWYiLz4KICAKICA8IS0tIENlbnRyZSBpbml0aWFsIC0tPgogIDx0ZXh0IHg9IjUwIiB5PSI1NSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjEzIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzFhMWExYSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UDwvdGV4dD4KPC9zdmc+Cg==" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1a1a1a; --paper: #f7f4ef; --accent: #c4622d; --accent-light: #f0e0d6;
+      --mid: #6b6560; --rule: #e0dbd4; --white: #ffffff; --blue: #2c4a6e;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--paper); color: var(--ink); line-height: 1.6; }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.25rem 4rem; background: var(--paper); border-bottom: 1px solid var(--rule);
+    }
+    .nav-logo { font-family: 'Space Mono', monospace; font-size: 1rem; font-weight: 700; letter-spacing: 0.05em; color: var(--ink); text-decoration: none; }
+    .nav-back { font-family: 'Space Mono', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); text-decoration: none; }
+    .nav-back:hover { color: var(--accent); }
+
+    .case-hero { padding-top: 5rem; background: var(--blue); color: var(--white); padding-bottom: 0; }
+    .case-hero-inner { padding: 5rem 4rem 3rem; max-width: 960px; }
+    .case-tag { font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: #7ba7d4; margin-bottom: 1.5rem; display: block; }
+    .case-title { font-family: 'DM Serif Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); color: var(--white); line-height: 1.1; margin-bottom: 1.5rem; }
+    .case-subtitle { font-size: 1.1rem; color: rgba(255,255,255,0.7); max-width: 600px; line-height: 1.75; margin-bottom: 3rem; }
+    .case-meta-row { display: flex; gap: 3rem; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 2rem; }
+    .meta-item p:first-child { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 0.3rem; }
+    .meta-item p:last-child { font-size: 0.9rem; color: var(--white); font-weight: 500; }
+    .case-hero-img { width: 100%; max-height: 500px; object-fit: cover; display: block; margin-top: 3rem; }
+
+    .case-content { max-width: 800px; margin: 0 auto; padding: 5rem 2rem; }
+    .content-section { margin-bottom: 5rem; }
+    .content-label { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+    .content-heading { font-family: 'DM Serif Display', serif; font-size: 1.75rem; color: var(--ink); margin-bottom: 1.25rem; }
+    .content-body { font-size: 1rem; color: var(--mid); line-height: 1.8; margin-bottom: 1.25rem; }
+
+    .insight-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem; }
+    .insight-card { background: var(--white); border: 1px solid var(--rule); padding: 1.5rem; border-left: 3px solid var(--accent); }
+    .insight-card .label { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+    .insight-card p { font-size: 0.9rem; color: var(--mid); line-height: 1.65; }
+
+    .research-quote { background: var(--accent-light); border-left: 4px solid var(--accent); padding: 2rem; margin: 2rem 0; }
+    .research-quote blockquote { font-family: 'DM Serif Display', serif; font-size: 1.35rem; font-style: italic; color: var(--ink); line-height: 1.5; margin-bottom: 0.75rem; }
+    .research-quote cite { font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); font-style: normal; }
+
+    .persona-card { background: var(--white); border: 1px solid var(--rule); padding: 2rem; margin-top: 1.5rem; }
+    .persona-header { display: flex; gap: 1.5rem; align-items: flex-start; margin-bottom: 1.5rem; }
+    .persona-avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--accent-light); display: flex; align-items: center; justify-content: center; font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: var(--accent); flex-shrink: 0; }
+    .persona-name { font-family: 'DM Serif Display', serif; font-size: 1.3rem; margin-bottom: 0.2rem; }
+    .persona-desc { font-size: 0.85rem; color: var(--mid); }
+    .persona-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .persona-grid-item .label { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
+    .persona-grid-item ul { list-style: none; }
+    .persona-grid-item li { font-size: 0.85rem; color: var(--mid); padding: 0.25rem 0; border-bottom: 1px solid var(--rule); }
+    .persona-grid-item li:last-child { border-bottom: none; }
+
+    .iteration-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+    .iteration-table th { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; text-align: left; padding: 0.75rem 1rem; background: var(--ink); color: var(--white); }
+    .iteration-table td { font-size: 0.875rem; color: var(--mid); padding: 0.875rem 1rem; border-bottom: 1px solid var(--rule); vertical-align: top; line-height: 1.6; }
+    .iteration-table tr:nth-child(even) td { background: var(--white); }
+    .badge { display: inline-block; font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2rem 0.6rem; }
+    .badge-worked { background: #d4edda; color: #2d6a3f; }
+    .badge-didnt { background: #fde8e0; color: #a33; }
+    .badge-improved { background: #dce8df; color: #2d6a3f; }
+
+    .wireframe-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+    .wireframe-item img { width: 100%; border: 1px solid var(--rule); display: block; }
+    .wireframe-item p { font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.05em; color: var(--mid); text-align: center; margin-top: 0.5rem; }
+
+    .learning-list { list-style: none; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+    .learning-list li { display: flex; gap: 1rem; align-items: flex-start; font-size: 0.95rem; color: var(--mid); line-height: 1.65; }
+    .learning-num { font-family: 'Space Mono', monospace; font-size: 0.8rem; font-weight: 700; color: var(--accent); flex-shrink: 0; padding-top: 0.1rem; }
+
+    .next-project { background: var(--ink); padding: 4rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 2rem; }
+    .next-project p { font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 0.5rem; }
+    .next-project h3 { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--white); }
+    .btn-primary { display: inline-block; background: var(--accent); color: var(--white); padding: 0.85rem 2rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+    .btn-primary:hover { background: #a8501f; }
+
+    footer { background: var(--ink); color: var(--mid); padding: 2rem 4rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; font-family: 'Space Mono', monospace; }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      nav { padding: 1.25rem 1.5rem; }
+      .case-hero-inner { padding: 5rem 1.5rem 2rem; }
+      .case-content { padding: 3rem 1.5rem; }
+      .insight-grid { grid-template-columns: 1fr; }
+      .persona-grid { grid-template-columns: 1fr 1fr; }
+      .wireframe-row { grid-template-columns: 1fr; }
+      .next-project { padding: 3rem 1.5rem; }
+      footer { flex-direction: column; gap: 0.5rem; padding: 2rem 1.5rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">P·V</a>
+    <a href="index.html" class="nav-back">← Back to Portfolio</a>
+  </nav>
+
+  <div class="case-hero">
+    <div class="case-hero-inner">
+      <span class="case-tag">Case Study 02 — Travel · App Design</span>
+      <h1 class="case-title">Life Airlines: Designing a Mobile-First Booking Experience</h1>
+      <p class="case-subtitle">A regional airline with no mobile app was losing bookings to friction. I designed a mobile experience that guided users from search to confirmation — matching the ease of top-tier airlines on a budget carrier's constraints.</p>
+      <div class="case-meta-row">
+        <div class="meta-item"><p>Role</p><p>Lead UX Research & Design</p></div>
+        <div class="meta-item"><p>Methods</p><p>Interviews · Usability Testing · Observation</p></div>
+        <div class="meta-item"><p>Tools</p><p>Figma · Miro</p></div>
+        <div class="meta-item"><p>Duration</p><p>5 Weeks</p></div>
+      </div>
+    </div>
+    <img class="case-hero-img" src="https://static.wixstatic.com/media/11062b_1229cdb86a6e4d2db370f340b9e0632f~mv2.jpeg" alt="Life Airlines app screens" />
+  </div>
+
+  <div class="case-content">
+
+    <div class="content-section">
+      <p class="content-label">The Problem</p>
+      <h2 class="content-heading">A broken experience was costing bookings</h2>
+      <p class="content-body">Life Airlines is a regional carrier that operates exclusively through a desktop website. Mobile users attempting to book through the browser encountered a pinched, unresponsive interface with unclear steps and no mobile-optimised flow — causing abandonment before checkout.</p>
+      <p class="content-body">The brief: design a dedicated mobile app that makes booking feel as effortless as it does on Kulula or FlySafair — without the tech budget of a major airline.</p>
+    </div>
+
+    <div class="content-section">
+      <p class="content-label">User Research</p>
+      <h2 class="content-heading">Understanding where the web experience failed</h2>
+      <p class="content-body">Rather than assume the problem was just "no mobile app," I observed users attempting to complete a booking via the existing website on their phones. The friction points revealed themselves quickly — and they were specific.</p>
+      <div class="insight-grid">
+        <div class="insight-card">
+          <p class="label">Research Question 1</p>
+          <p>At what point in the booking journey do mobile users abandon — and what triggers that decision?</p>
+        </div>
+        <div class="insight-card">
+          <p class="label">Research Question 2</p>
+          <p>What mental model do users bring to flight booking? What do they expect to be easy that currently isn't?</p>
+        </div>
+        <div class="insight-card">
+          <p class="label">Research Question 3</p>
+          <p>How do users make package and seat decisions on mobile — what information do they need at each stage?</p>
+        </div>
+        <div class="insight-card">
+          <p class="label">Research Question 4</p>
+          <p>What makes users trust a lesser-known airline's app with their payment details?</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <p class="content-label">Key Findings</p>
+      <h2 class="content-heading">The real friction wasn't the site — it was the flow</h2>
+
+      <div class="research-quote">
+        <blockquote>"I just gave up and booked on Kulula instead. The Life Airlines site was too small on my phone and I couldn't see what I was selecting."</blockquote>
+        <cite>— Interview participant, frequent domestic traveller</cite>
+      </div>
+
+      <div class="research-quote">
+        <blockquote>"I didn't know if my seat was actually saved — there was no confirmation and I wasn't sure if I should keep going or start over."</blockquote>
+        <cite>— Usability test participant, mid-booking</cite>
+      </div>
+
+      <div class="insight-grid">
+        <div class="insight-card">
+          <p class="label">Finding 1 — No Mobile Context</p>
+          <p>Users couldn't differentiate between steps in the booking flow on mobile. There was no progress indicator, leaving them unsure how far they were from completion.</p>
+        </div>
+        <div class="insight-card">
+          <p class="label">Finding 2 — Trust Deficit</p>
+          <p>Participants hesitated at the payment screen. The lack of familiar security cues (trusted payment logos, visual confirmation) on a non-branded browser window created anxiety around entering card details.</p>
+        </div>
+        <div class="insight-card">
+          <p class="label">Finding 3 — Package Confusion</p>
+          <p>Seat and package options were presented as a wall of text with no visual differentiation. Users couldn't quickly compare options or understand what each tier included.</p>
+        </div>
+        <div class="insight-card">
+          <p class="label">Finding 4 — No Personalisation</p>
+          <p>Returning users had to re-enter all passenger details every time. No account system meant every booking felt like starting from scratch — increasing cognitive load.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <p class="content-label">User Personas</p>
+      <h2 class="content-heading">Who I was designing for</h2>
+
+      <div class="persona-card">
+        <div class="persona-header">
+          <div class="persona-avatar">L</div>
+          <div>
+            <p class="persona-name">Lerato, 31</p>
+            <p class="persona-desc">Sales representative · Johannesburg · Frequent domestic traveller, always books on mobile</p>
+          </div>
+        </div>
+        <div class="persona-grid">
+          <div class="persona-grid-item">
+            <p class="label">Goals</p>
+            <ul>
+              <li>Book quickly between client meetings</li>
+              <li>Know exactly what's included in her fare</li>
+              <li>Get a confirmation she can show at the airport</li>
+            </ul>
+          </div>
+          <div class="persona-grid-item">
+            <p class="label">Frustrations</p>
+            <ul>
+              <li>Unclear steps make her doubt the booking went through</li>
+              <li>Re-entering details every time wastes time</li>
+              <li>Tiny tap targets on mobile web</li>
+            </ul>
+          </div>
+          <div class="persona-grid-item">
+            <p class="label">Behaviours</p>
+            <ul>
+              <li>Books flights on her phone during commutes</li>
+              <li>Compares 2–3 airlines before deciding</li>
+              <li>Trusts apps over mobile websites</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="persona-card">
+        <div class="persona-header">
+          <div class="persona-avatar" style="background:#e8edf5; color:#2c4a6e;">S</div>
+          <div>
+            <p class="persona-name">Sipho, 52</p>
+            <p class="persona-desc">Small business owner · Cape Town · Infrequent flyer, low digital confidence</p>
+          </div>
+        </div>
+        <div class="persona-grid">
+          <div class="persona-grid-item">
+            <p class="label">Goals</p>
+            <ul>
+              <li>Complete a booking without calling the airline</li>
+              <li>Understand what he's paying for before confirming</li>
+              <li>Feel confident the payment was processed</li>
+            </ul>
+          </div>
+          <div class="persona-grid-item">
+            <p class="label">Frustrations</p>
+            <ul>
+              <li>Jargon in fare descriptions (flex, saver, etc.)</li>
+              <li>Fear of double-booking or being charged twice</li>
+              <li>No human to ask when confused</li>
+            </ul>
+          </div>
+          <div class="persona-grid-item">
+            <p class="label">Behaviours</p>
+            <ul>
+              <li>Reads every screen carefully before tapping</li>
+              <li>Prefers plain language over airline jargon</li>
+              <li>Books in advance, rarely same-day</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <p class="content-label">Testing & Iteration</p>
+      <h2 class="content-heading">What usability testing revealed</h2>
+      <table class="iteration-table">
+        <thead>
+          <tr><th>Finding</th><th>Status</th><th>Action Taken</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>A prominent step indicator ("Step 2 of 5") reduced confusion about how much was left in the flow</td>
+            <td><span class="badge badge-worked">Worked</span></td>
+            <td>Retained across all booking stages with animated transitions between steps</td>
+          </tr>
+          <tr>
+            <td>Visual fare cards (with icon-based feature lists) helped users compare options faster than text descriptions</td>
+            <td><span class="badge badge-worked">Worked</span></td>
+            <td>Expanded this pattern to seat selection and luggage add-ons</td>
+          </tr>
+          <tr>
+            <td>Users missed the "continue" button when it appeared below the fold — two participants thought the page had loaded incorrectly</td>
+            <td><span class="badge badge-didnt">Didn't Work</span></td>
+            <td>Moved primary CTA to a sticky footer bar, always visible regardless of scroll position</td>
+          </tr>
+          <tr>
+            <td>Payment screen lacked visible security cues — Sipho stopped and said he "wasn't sure it was safe"</td>
+            <td><span class="badge badge-didnt">Didn't Work</span></td>
+            <td>Added SSL badge, card logos, and a "your payment is encrypted" reassurance line above the submit button</td>
+          </tr>
+          <tr>
+            <td>Confirmation screen didn't surface the booking reference prominently — users scrolled looking for it</td>
+            <td><span class="badge badge-improved">Improved</span></td>
+            <td>Redesigned confirmation to lead with a large booking reference, with "Save to Wallet" and "Email confirmation" as immediate CTAs</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="content-section">
+      <p class="content-label">Design Output</p>
+      <h2 class="content-heading">Wireframes</h2>
+      <div class="wireframe-row">
+        <div class="wireframe-item">
+          <img src="https://static.wixstatic.com/media/43a5bc_1cbf59c7200c4dafa13551f87a10bc77~mv2.png" alt="Life Airlines low fidelity wireframe" />
+          <p>Low fidelity — flow and structure</p>
+        </div>
+        <div class="wireframe-item">
+          <img src="https://static.wixstatic.com/media/43a5bc_b1957db889d74708ac74c68613e91117~mv2.png" alt="Life Airlines high fidelity wireframe" />
+          <p>High fidelity — visual design & prototype</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <p class="content-label">Key Learnings</p>
+      <h2 class="content-heading">What this project taught me</h2>
+      <ul class="learning-list">
+        <li><span class="learning-num">01</span><span>A clear, guided flow significantly improves user confidence — especially for infrequent travellers. The simpler the decision architecture, the fewer the drop-offs, even for users who are unfamiliar with digital booking.</span></li>
+        <li><span class="learning-num">02</span><span>Trust is a design problem. Users make unconscious assessments of an app's safety within the first few screens. Visual cues — logos, reassurance copy, familiar payment icons — are as important as functional security.</span></li>
+        <li><span class="learning-num">03</span><span>Sticky CTAs solve a specific mobile problem: the fold. Removing the need to scroll to find the next action eliminated a common point of confusion and drop-off that I hadn't anticipated before testing.</span></li>
+        <li><span class="learning-num">04</span><span>Observation revealed what interviews couldn't. Watching Sipho pause at the payment screen and verbalise his hesitation gave me insight that no survey question would have surfaced.</span></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="next-project">
+    <div>
+      <p>Next Case Study</p>
+      <h3>SwapCircle — Bartering App</h3>
+    </div>
+    <a href="barter.html" class="btn-primary">View Project →</a>
+  </div>
+
+  <footer>
+    <span>© 2026 Phiwo Vilakazi</span>
+    <a href="index.html">← Back to Portfolio</a>
+  </footer>
+
+</body>
+</html>

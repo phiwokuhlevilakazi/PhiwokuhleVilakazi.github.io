@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SwapCircle — Case Study | Phiwo Vilakazi</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCI+CiAgPCEtLSBCYWNrZ3JvdW5kIC0tPgogIDxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjMWExYTFhIi8+CiAgCiAgPCEtLSBQZXRhbHMgLSB0ZXJyYWNvdHRhIC0tPgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjI4IiByeD0iNyIgcnk9IjE0IiBmaWxsPSIjYzQ2MjJkIiBvcGFjaXR5PSIwLjkiLz4KICA8ZWxsaXBzZSBjeD0iNTAiIGN5PSI3MiIgcng9IjciIHJ5PSIxNCIgZmlsbD0iI2M0NjIyZCIgb3BhY2l0eT0iMC45Ii8+CiAgPGVsbGlwc2UgY3g9IjI4IiBjeT0iNTAiIHJ4PSIxNCIgcnk9IjciIGZpbGw9IiNjNDYyMmQiIG9wYWNpdHk9IjAuOSIvPgogIDxlbGxpcHNlIGN4PSI3MiIgY3k9IjUwIiByeD0iMTQiIHJ5PSI3IiBmaWxsPSIjYzQ2MjJkIiBvcGFjaXR5PSIwLjkiLz4KCiAgPCEtLSBEaWFnb25hbCBwZXRhbHMgLSBzbGlnaHRseSBsaWdodGVyIC0tPgogIDxlbGxpcHNlIGN4PSIzMiIgY3k9IjMyIiByeD0iNyIgcnk9IjE0IiBmaWxsPSIjZDQ3MzNlIiBvcGFjaXR5PSIwLjg1IiB0cmFuc2Zvcm09InJvdGF0ZSg0NSAzMiAzMikiLz4KICA8ZWxsaXBzZSBjeD0iNjgiIGN5PSIzMiIgcng9IjciIHJ5PSIxNCIgZmlsbD0iI2Q0NzMzZSIgb3BhY2l0eT0iMC44NSIgdHJhbnNmb3JtPSJyb3RhdGUoLTQ1IDY4IDMyKSIvPgogIDxlbGxpcHNlIGN4PSIzMiIgY3k9IjY4IiByeD0iNyIgcnk9IjE0IiBmaWxsPSIjZDQ3MzNlIiBvcGFjaXR5PSIwLjg1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNDUgMzIgNjgpIi8+CiAgPGVsbGlwc2UgY3g9IjY4IiBjeT0iNjgiIHJ4PSI3IiByeT0iMTQiIGZpbGw9IiNkNDczM2UiIG9wYWNpdHk9IjAuODUiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDY4IDY4KSIvPgoKICA8IS0tIENlbnRyZSBjaXJjbGUgLS0+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iMTIiIGZpbGw9IiNmN2Y0ZWYiLz4KICAKICA8IS0tIENlbnRyZSBpbml0aWFsIC0tPgogIDx0ZXh0IHg9IjUwIiB5PSI1NSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjEzIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzFhMWExYSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UDwvdGV4dD4KPC9zdmc+Cg==" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1a1a1a; --paper: #f7f4ef; --accent: #c4622d; --accent-light: #f0e0d6;
+      --mid: #6b6560; --rule: #e0dbd4; --white: #ffffff; --green: #2d5a3d; --green-light: #dce8df;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--paper); color: var(--ink); line-height: 1.6; }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.25rem 4rem; background: var(--paper); border-bottom: 1px solid var(--rule);
+    }
+    .nav-logo { font-family: 'Space Mono', monospace; font-size: 1rem; font-weight: 700; letter-spacing: 0.05em; color: var(--ink); text-decoration: none; }
+    .nav-back { font-family: 'Space Mono', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); text-decoration: none; }
+    .nav-back:hover { color: var(--accent); }
+
+    .case-hero { padding-top: 5rem; background: var(--green); color: var(--white); padding-bottom: 0; }
+    .case-hero-inner { padding: 5rem 4rem 3rem; max-width: 960px; }
+    .case-tag { font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: #8fbfa0; margin-bottom: 1.5rem; display: block; }
+    .case-title { font-family: 'DM Serif Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); color: var(--white); line-height: 1.1; margin-bottom: 1.5rem; }
+    .case-subtitle { font-size: 1.1rem; color: rgba(255,255,255,0.75); max-width: 600px; line-height: 1.75; margin-bottom: 3rem; }
+    .case-meta-row { display: flex; gap: 3rem; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 2rem; }
+    .meta-item p:first-child { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 0.3rem; }
+    .meta-item p:last-child { font-size: 0.9rem; color: var(--white); font-weight: 500; }
+
+    .hero-placeholder {
+      width: 100%; height: 320px; background: var(--green-light);
+      display: flex; align-items: center; justify-content: center; margin-top: 3rem;
+    }
+    .hero-placeholder-inner { text-align: center; }
+    .hero-placeholder-inner svg { margin-bottom: 1rem; }
+    .hero-placeholder-inner p { font-family: 'Space Mono', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); }
+
+    .case-content { max-width: 800px; margin: 0 auto; padding: 5rem 2rem; }
+    .content-section { margin-bottom: 5rem; }
+    .content-label { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+    .content-heading { font-family: 'DM Serif Display', serif; font-size: 1.75rem; color: var(--ink); margin-bottom: 1.25rem; }
+    .content-body { font-size: 1rem; color: var(--mid); line-height: 1.8; margin-bottom: 1.25rem; }
+
+    .insight-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem; }
+    .insight-card { background: var(--white); border: 1px solid var(--rule); padding: 1.5rem; border-left: 3px solid var(--accent); }
+    .insight-card .label { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+    .insight-card p { font-size: 0.9rem; color: var(--mid); line-height: 1.65; }
+
+    .research-quote { background: var(--green-light); border-left: 4px solid var(--green); padding: 2rem; margin: 2rem 0; }
+    .research-quote blockquote { font-family: 'DM Serif Display', serif; font-size: 1.35rem; font-style: italic; color: var(--ink); line-height: 1.5; margin-bottom: 0.75rem; }
+    .research-quote cite { font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); font-style: normal; }
+
+    .persona-card { background: var(--white); border: 1px solid var(--rule); padding: 2rem; margin-top: 1.5rem; }
+    .persona-header { display: flex; gap: 1.5rem; align-items: flex-start; margin-bottom: 1.5rem; }
+    .persona-avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--green-light); display: flex; align-items: center; justify-content: center; font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: var(--green); flex-shrink: 0; }
+    .persona-name { font-family: 'DM Serif Display', serif; font-size: 1.3rem; margin-bottom: 0.2rem; }
+    .persona-desc { font-size: 0.85rem; color: var(--mid); }
+    .persona-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .persona-grid-item .label { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
+    .persona-grid-item ul { list-style: none; }
+    .persona-grid-item li { font-size: 0.85rem; color: var(--mid); padding: 0.25rem 0; border-bottom: 1px solid var(--rule); }
+    .persona-grid-item li:last-child { border-bottom: none; }
+
+    .iteration-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+    .iteration-table th { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; text-align: left; padding: 0.75rem 1rem; background: var(--ink); color: var(--white); }
+    .iteration-table td { font-size: 0.875rem; color: var(--mid); padding: 0.875rem 1rem; border-bottom: 1px solid var(--rule); vertical-align: top; line-height: 1.6; }
+    .iteration-table tr:nth-child(even) td { background: var(--white); }
+    .badge { display: inline-block; font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2rem 0.6rem; }
+    .badge-worked { background: #d4edda; color: #2d6a3f; }
+    .badge-didnt { background: #fde8e0; color: #a33; }
+    .badge-improved { background: #dce8df; color: #2d6a3f; }
+
+    .learning-list { list-style: none; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+    .learning-list li { display: flex; gap: 1rem; align-items: flex-start; font-size: 0.95rem; color: var(--mid); line-height: 1.65; }
+    .learning-num { font-family: 'Space Mono', monospace; font-size: 0.8rem; font-weight: 700; color: var(--accent); flex-shrink: 0; padding-top: 0.1rem; }
+
+    .in-progress-banner {
+      background: var(--green-light); border: 1px solid #a8cdb4; padding: 1.5rem 2rem;
+      display: flex; align-items: center; gap: 1rem; margin-bottom: 3rem;
+    }
+    .in-progress-banner p { font-size: 0.9rem; color: var(--green); }
+    .in-progress-banner strong { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+
+    .next-project { background: var(--ink); padding: 4rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 2rem; }
+    .next-project p { font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 0.5rem; }
+    .next-project h3 { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--white); }
+    .btn-primary { display: inline-block; background: var(--accent); color: var(--white); padding: 0.85rem 2rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+    .btn-primary:hover { background: #a8501f; }
+
+    footer { background: var(--ink); color: var(--mid); padding: 2rem 4rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; font-family: 'Space Mono', monospace; }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      nav { padding: 1.25rem 1.5rem; }
+      .case-hero-inner { padding: 5rem 1.5rem 2rem; }
+      .case-content { padding: 3rem 1.5rem; }
+      .insight-grid { grid-template-columns: 1fr; }
+      .persona-grid { grid-template-columns: 1fr 1fr; }
+      .next-project { padding: 3rem 1.5rem; }
+      footer { flex-direction: column; gap: 0.5rem; padding: 2rem 1.5rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">P·V</a>
+    <a href="index.html" class="nav-back">← Back to Portfolio</a>
+  </nav>
+
+  <div class="case-hero">
+    <div class="case-hero-inner">
+      <span class="case-tag">Case Study 03 — Community · App Design</span>
+      <h1 class="case-title">SwapCircle: Designing for Exchange Without Money</h1>
+      <p class="case-subtitle">In a context where cash is scarce but skills and goods are abundant, bartering is a survival strategy. SwapCircle set out to formalise informal exchange — turning neighbourhood trades into a trusted, transparent community platform.</p>
+      <div class="case-meta-row">
+        <div class="meta-item"><p>Role</p><p>UX Research & Design</p></div>
+        <div class="meta-item"><p>Methods</p><p>Interviews · Contextual Inquiry · Usability Testing</p></div>
+        <div class="meta-item"><p>Tools</p><p>Figma · Miro · Notion</p></div>
+        <div class="meta-item"><p>Status</p><p>In Progress</p></div>
+      </div>
+    </div>
+    <div class="hero-placeholder">
+      <div class="hero-placeholder-inner">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="36" stroke="#4a7c5b" stroke-width="2"/>
+          <path d="M25 42 L55 42 M48 35 L55 42 L48 49" stroke="#4a7c5b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M55 32 L25 32 M32 25 L25 32 L32 39" stroke="#c4622d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p>Wireframes in progress</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-content">
+
+    <div class="in-progress-banner">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#2d5a3d" stroke-width="1.5"/><path d="M10 6v4l2.5 2.5" stroke="#2d5a3d" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <p><strong>This case study is currently in progress.</strong> The research and discovery phases are complete. Wireframes and usability testing are underway — check back soon for the full case study.</p>
+    </div>
+
+    <div class="content-section">
+      <p class="content-label">The Problem</p>
+      <h2 class="content-heading">Money isn't the only currency — but finding someone to trade with is hard</h2>
+      <p class="content-body">Informal bartering has always existed in South African communities — swapping produce, skills, childcare, and labour outside the cash economy. But it relies on knowing the right person at the right time, and on enough social trust to exchange without a paper trail.</p>
+      <p class="content-body">The question this project asks: can a digital platform support that exchange without killing the human element that makes it work? Can we design for trust between strangers who have nothing but community in common?</p>
+    </div>
+
+    <div class="content-section">
+      <p class="content-label">User Research</p>
+      <h2 class="content-heading">What I needed to understand first</h2>
+      <p class="content-body">Before considering features, I needed to understand the informal economy that already exists — how people currently find trade partners, negotiate value, and decide who to trust.</p>
+      <div class="insight-grid">
+        <div class="insight-card">
+          <p class="label">Research Question 1</p>
+          <p>How do people currently find others to barter with — and what makes them trust a stranger enough to complete a trade?</p>
+        </div>
+        <div class="insight-card">
+          <p class="label">Research Question 2</p>
+          <p>How do people determine the "value" of goods or skills when there's no price to anchor to — and how do disagreements get resolved?</p>
+        </div>
+        <div class="insight-card">
+          <p class="label">Research Question 3</p>
+          <p>What would make someone feel safe completing a trade with a stranger they met online?</p>
+        </div>
+        <div class="insight-card">
+          <p class="label">Research Question 4</p>
+          <p>Who is most likely to use a bartering platform regularly — and what would keep them coming back?</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <p class="content-label">Key Findings</p>
+      <h2 class="content-heading">Research insights from interviews and contextual inquiry</h2>
+
+      <div class="research-quote">
+        <blockquote>"I swapped my neighbour's kid's school shoes for some vegetables I grew. But I'd never do that with someone I don't know — I need to know who I'm dealing with."</blockquote>
+        <cite>— Interview participant, Soweto</cite>
+      </div>
+
+      <div class="research-quote">
+        <blockquote>"There's no fair way to agree on value without arguing. If I say my haircut is worth two bags of flour and you don't agree, who decides? We need something to help with that."</blockquote>
+        <cite>— Interview participant, informal trader</cite>
+      </div>
+
+      <div class="insight-grid">
+        <div class="insight-card">
+          <p class="label">Finding 1 — Trust is Social</p>
+          <p>Participants trusted trades that came through social network referrals. A stranger's rating or review wasn't enough — they wanted to see mutual connections or community affiliation.</p>
+        </div>
+        <div class="insight-card">
+          <p class="label">Finding 2 — Value is Contested</p>
+          <p>Determining equivalent value between different types of goods or services was the most significant barrier to completing a trade. Participants wanted a community-informed "fair exchange" guide.</p>
+        </div>
+        <div class="insight-card">
+          <p class="label">Finding 3 — Safety Concerns Are Gendered</p>
+          <p>Female participants raised safety concerns about meeting strangers for exchanges that male participants did not. The platform would need to design for this — suggested pick-up points, public spaces, photo verification.</p>
+        </div>
+        <div class="insight-card">
+          <p class="label">Finding 4 — Digital Literacy Varies</p>
+          <p>Older participants were open to the concept but unfamiliar with app patterns like swiping or profile building. The onboarding needed to be exceptionally low-friction and tutorial-forward.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <p class="content-label">User Personas</p>
+      <h2 class="content-heading">Who I was designing for</h2>
+
+      <div class="persona-card">
+        <div class="persona-header">
+          <div class="persona-avatar">Z</div>
+          <div>
+            <p class="persona-name">Zanele, 26</p>
+            <p class="persona-desc">Freelance seamstress · Tembisa · Resource-conscious, community-oriented, active on social media</p>
+          </div>
+        </div>
+        <div class="persona-grid">
+          <div class="persona-grid-item">
+            <p class="label">Goals</p>
+            <ul>
+              <li>Trade sewing services for things she needs</li>
+              <li>Build a reputation in her community</li>
+              <li>Reduce reliance on cash for everyday needs</li>
+            </ul>
+          </div>
+          <div class="persona-grid-item">
+            <p class="label">Frustrations</p>
+            <ul>
+              <li>Hard to find people outside her immediate circle</li>
+              <li>Awkward negotiations without a neutral framework</li>
+              <li>Safety concerns about meeting strangers</li>
+            </ul>
+          </div>
+          <div class="persona-grid-item">
+            <p class="label">Behaviours</p>
+            <ul>
+              <li>Posts her services on community Facebook groups</li>
+              <li>Prefers face-to-face exchange in familiar areas</li>
+              <li>Highly motivated by community reputation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="persona-card">
+        <div class="persona-header">
+          <div class="persona-avatar" style="background:#f7f4ef; color:#6b6560;">M</div>
+          <div>
+            <p class="persona-name">Mr Dlamini, 58</p>
+            <p class="persona-desc">Retired teacher · Pietermaritzburg · Has skills and time, low disposable income, limited smartphone experience</p>
+          </div>
+        </div>
+        <div class="persona-grid">
+          <div class="persona-grid-item">
+            <p class="label">Goals</p>
+            <ul>
+              <li>Offer tutoring in exchange for household help</li>
+              <li>Supplement his pension through skills exchange</li>
+              <li>Stay socially connected in retirement</li>
+            </ul>
+          </div>
+          <div class="persona-grid-item">
+            <p class="label">Frustrations</p>
+            <ul>
+              <li>Unfamiliar with app navigation patterns</li>
+              <li>Worries about being taken advantage of</li>
+              <li>Doesn't know how to represent his services digitally</li>
+            </ul>
+          </div>
+          <div class="persona-grid-item">
+            <p class="label">Behaviours</p>
+            <ul>
+              <li>Uses WhatsApp to communicate but little else</li>
+              <li>Trusts referrals from people he knows</li>
+              <li>Prefers simple, step-by-step guidance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <p class="content-label">Design Direction</p>
+      <h2 class="content-heading">Key design decisions emerging from research</h2>
+      <table class="iteration-table">
+        <thead>
+          <tr><th>Insight</th><th>Design Response</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Trust comes from shared social networks, not just reviews</td>
+            <td>Show mutual community connections and community group affiliations on user profiles, not just star ratings</td>
+          </tr>
+          <tr>
+            <td>Value negotiation is the biggest friction point</td>
+            <td>Build a "Community Value Guide" — crowd-sourced exchange rates for common goods and services to anchor negotiations</td>
+          </tr>
+          <tr>
+            <td>Female users have safety concerns about meeting strangers</td>
+            <td>Suggest verified public meeting spots for exchanges; add a "safe swap" feature allowing a trusted contact to be notified of the exchange time and location</td>
+          </tr>
+          <tr>
+            <td>Older users need very low-friction onboarding</td>
+            <td>Design an illustrated, voice-guided walkthrough for first-time users; allow profile setup across multiple sessions rather than requiring completion in one go</td>
+          </tr>
+          <tr>
+            <td>Community reputation drives engagement more than individual incentives</td>
+            <td>Design a visible "community reputation" score based on completed swaps, reviews, and community participation rather than a generic 5-star rating</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="content-section">
+      <p class="content-label">Key Learnings So Far</p>
+      <h2 class="content-heading">What this project is teaching me</h2>
+      <ul class="learning-list">
+        <li><span class="learning-num">01</span><span>Designing for informal economies requires humility. The systems people have built without technology are sophisticated — the role of design is to support and extend them, not replace them with something "better."</span></li>
+        <li><span class="learning-num">02</span><span>Trust is not a feature — it's an ecosystem. You can't design a single "trust signal" and call it solved. It requires layered social proof, transparency about the exchange process, and built-in safety mechanisms.</span></li>
+        <li><span class="learning-num">03</span><span>Gender and safety must be designed for proactively, not addressed after the fact. The research made clear that a neutral design is not a safe design for all users.</span></li>
+        <li><span class="learning-num">04</span><span>Community is the product. The bartering app only works if the community around it is active and healthy — which means the UX needs to nurture participation, not just facilitate transactions.</span></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="next-project">
+    <div>
+      <p>Back to start</p>
+      <h3>View All Projects</h3>
+    </div>
+    <a href="index.html#portfolio" class="btn-primary">← All Case Studies</a>
+  </div>
+
+  <footer>
+    <span>© 2026 Phiwo Vilakazi</span>
+    <a href="index.html">← Back to Portfolio</a>
+  </footer>
+
+</body>
+</html>

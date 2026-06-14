@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phiwo Vilakazi | UX Researcher</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCI+CiAgPCEtLSBCYWNrZ3JvdW5kIC0tPgogIDxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjMWExYTFhIi8+CiAgCiAgPCEtLSBQZXRhbHMgLSB0ZXJyYWNvdHRhIC0tPgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjI4IiByeD0iNyIgcnk9IjE0IiBmaWxsPSIjYzQ2MjJkIiBvcGFjaXR5PSIwLjkiLz4KICA8ZWxsaXBzZSBjeD0iNTAiIGN5PSI3MiIgcng9IjciIHJ5PSIxNCIgZmlsbD0iI2M0NjIyZCIgb3BhY2l0eT0iMC45Ii8+CiAgPGVsbGlwc2UgY3g9IjI4IiBjeT0iNTAiIHJ4PSIxNCIgcnk9IjciIGZpbGw9IiNjNDYyMmQiIG9wYWNpdHk9IjAuOSIvPgogIDxlbGxpcHNlIGN4PSI3MiIgY3k9IjUwIiByeD0iMTQiIHJ5PSI3IiBmaWxsPSIjYzQ2MjJkIiBvcGFjaXR5PSIwLjkiLz4KCiAgPCEtLSBEaWFnb25hbCBwZXRhbHMgLSBzbGlnaHRseSBsaWdodGVyIC0tPgogIDxlbGxpcHNlIGN4PSIzMiIgY3k9IjMyIiByeD0iNyIgcnk9IjE0IiBmaWxsPSIjZDQ3MzNlIiBvcGFjaXR5PSIwLjg1IiB0cmFuc2Zvcm09InJvdGF0ZSg0NSAzMiAzMikiLz4KICA8ZWxsaXBzZSBjeD0iNjgiIGN5PSIzMiIgcng9IjciIHJ5PSIxNCIgZmlsbD0iI2Q0NzMzZSIgb3BhY2l0eT0iMC44NSIgdHJhbnNmb3JtPSJyb3RhdGUoLTQ1IDY4IDMyKSIvPgogIDxlbGxpcHNlIGN4PSIzMiIgY3k9IjY4IiByeD0iNyIgcnk9IjE0IiBmaWxsPSIjZDQ3MzNlIiBvcGFjaXR5PSIwLjg1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNDUgMzIgNjgpIi8+CiAgPGVsbGlwc2UgY3g9IjY4IiBjeT0iNjgiIHJ4PSI3IiByeT0iMTQiIGZpbGw9IiNkNDczM2UiIG9wYWNpdHk9IjAuODUiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDY4IDY4KSIvPgoKICA8IS0tIENlbnRyZSBjaXJjbGUgLS0+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iMTIiIGZpbGw9IiNmN2Y0ZWYiLz4KICAKICA8IS0tIENlbnRyZSBpbml0aWFsIC0tPgogIDx0ZXh0IHg9IjUwIiB5PSI1NSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjEzIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzFhMWExYSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UDwvdGV4dD4KPC9zdmc+Cg==" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --paper: #f7f4ef;
+      --accent: #c4622d;
+      --accent-light: #f0e0d6;
+      --mid: #6b6560;
+      --rule: #e0dbd4;
+      --white: #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 4rem;
+      background: var(--paper);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .nav-logo {
+      font-family: 'Space Mono', monospace;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 5rem;
+    }
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6rem 4rem 6rem 4rem;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(3rem, 5vw, 5rem);
+      line-height: 1.05;
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+
+    .hero-name em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 2rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 1rem;
+    }
+
+    .hero-bio {
+      font-size: 1.05rem;
+      color: var(--mid);
+      max-width: 480px;
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--white);
+      padding: 0.85rem 2rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .btn-primary:hover { background: #a8501f; }
+
+    .btn-secondary {
+      display: inline-block;
+      border: 1.5px solid var(--ink);
+      color: var(--ink);
+      padding: 0.85rem 2rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover { background: var(--ink); color: var(--white); }
+
+    .hero-image {
+      position: relative;
+      background: var(--accent-light);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      filter: grayscale(15%);
+    }
+
+    .hero-image-overlay {
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--white);
+      padding: 1rem 1.5rem;
+      border-left: 3px solid var(--accent);
+    }
+
+    .hero-image-overlay p {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: var(--mid);
+      text-transform: uppercase;
+    }
+
+    .hero-image-overlay strong {
+      display: block;
+      font-size: 1.25rem;
+      font-family: 'DM Serif Display', serif;
+      color: var(--ink);
+    }
+
+    /* SECTION SHARED */
+    section { padding: 6rem 4rem; }
+
+    .section-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      color: var(--ink);
+      margin-bottom: 3rem;
+    }
+
+    /* TOOLS */
+    .tools-section {
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .tools-section .section-label { color: var(--accent); }
+    .tools-section .section-title { color: var(--white); }
+
+    .tools-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .tool-tag {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.8);
+      padding: 0.5rem 1.25rem;
+      font-size: 0.8rem;
+      font-family: 'Space Mono', monospace;
+      letter-spacing: 0.05em;
+      transition: all 0.2s;
+    }
+
+    .tool-tag:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* PORTFOLIO */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: var(--white);
+      text-decoration: none;
+      color: var(--ink);
+      display: block;
+      transition: transform 0.25s;
+      border: 1px solid var(--rule);
+    }
+
+    .project-card:hover { transform: translateY(-4px); }
+
+    .project-card-img {
+      height: 220px;
+      background: var(--accent-light);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .project-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-card-tag {
+      position: absolute;
+      top: 1rem; left: 1rem;
+      background: var(--accent);
+      color: var(--white);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+    }
+
+    .project-card-body {
+      padding: 1.5rem;
+    }
+
+    .project-card-body h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card-body p {
+      font-size: 0.875rem;
+      color: var(--mid);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .project-card-meta {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .meta-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent-light);
+      padding: 0.2rem 0.6rem;
+    }
+
+    /* EXPERIENCE */
+    .experience-section { background: var(--white); }
+
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+      border-left: 2px solid var(--rule);
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      max-width: 760px;
+    }
+
+    .timeline-item { position: relative; }
+
+    .timeline-dot {
+      position: absolute;
+      left: -2.6rem;
+      top: 0.3rem;
+      width: 12px;
+      height: 12px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    .timeline-date {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .timeline-role {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-org {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--mid);
+      margin-bottom: 0.75rem;
+    }
+
+    .timeline-desc {
+      font-size: 0.9rem;
+      color: var(--mid);
+      line-height: 1.75;
+    }
+
+    /* CONTACT */
+    .contact-section {
+      background: var(--accent);
+      color: var(--white);
+    }
+
+    .contact-section .section-label { color: rgba(255,255,255,0.6); }
+    .contact-section .section-title { color: var(--white); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-text p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 2rem;
+    }
+
+    .contact-email {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.4rem;
+      color: var(--white);
+      text-decoration: none;
+      border-bottom: 2px solid rgba(255,255,255,0.4);
+      padding-bottom: 0.25rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .social-link {
+      display: inline-block;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      color: var(--white);
+      padding: 0.5rem 1.25rem;
+      font-size: 0.75rem;
+      font-family: 'Space Mono', monospace;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .social-link:hover {
+      background: rgba(255,255,255,0.15);
+      border-color: var(--white);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--ink);
+      color: var(--mid);
+      padding: 2rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      font-family: 'Space Mono', monospace;
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav { padding: 1.25rem 2rem; }
+      .nav-links { gap: 1.5rem; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-text { padding: 7rem 2rem 3rem; }
+      .hero-image { height: 420px; }
+      section { padding: 4rem 2rem; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+      footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 2rem; }
+    }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .hero-name { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">P·V</a>
+    <ul class="nav-links">
+      <li><a href="#portfolio">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" style="padding:0;">
+    <div class="hero-text">
+      <p class="hero-eyebrow">UX Researcher — Cape Town, South Africa</p>
+      <h1 class="hero-name">I'm<br /><em>Phiwo</em><br />Vilakazi.</h1>
+      <p class="hero-title">UX Researcher & Designer</p>
+      <p class="hero-bio">I turn human behaviour into design decisions. Trained in psychology, sharpened by five years of customer-facing work, and fluent in AI-assisted design — I research the friction people don't always say out loud, and use every tool available to remove it.</p>
+      <div class="hero-cta">
+        <a href="#portfolio" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://static.wixstatic.com/media/43a5bc_1b91cff0660f4b79a0af657c9b53ad61~mv2.jpeg" alt="Phiwo Vilakazi" />
+      <div class="hero-image-overlay">
+        <p>Currently available for</p>
+        <strong>UX Research roles</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section style="background:var(--white); padding: 5rem 4rem;">
+    <div style="max-width:820px;">
+      <p class="section-label">Research Philosophy</p>
+      <h2 style="font-family:'DM Serif Display',serif; font-size:clamp(1.75rem,3vw,2.5rem); color:var(--ink); line-height:1.3; margin-bottom:1.5rem;">Good research starts before the first question is asked.</h2>
+      <p style="font-size:1.05rem; color:var(--mid); line-height:1.85; margin-bottom:1.25rem;">My Psychology and Criminology background taught me that behaviour is never random — it's shaped by environment, context, and systems people often can't articulate. That's the lens I bring to UX research: I'm less interested in what users say they do, and more interested in understanding why they do it.</p>
+      <p style="font-size:1.05rem; color:var(--mid); line-height:1.85; margin-bottom:1.25rem;">I combine structured research methods with AI-assisted synthesis to move from raw insights to design decisions faster — without losing the human nuance that makes research worth doing. I'm especially drawn to products that serve communities whose behaviours and needs are underrepresented in mainstream design thinking.</p>
+      <p style="font-size:1.05rem; color:var(--mid); line-height:1.85;">Five years in customer service taught me something no certificate can: that the gap between what a product promises and what a user actually experiences is where the most important design work lives.</p>
+    </div>
+  </section>
+
+  <section class="tools-section">
+    <p class="section-label">Tools & Methods</p>
+    <h2 class="section-title">How I Work</h2>
+    <div style="margin-bottom:2rem;">
+      <p style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:1rem;">Design & Research</p>
+      <div class="tools-grid">
+        <span class="tool-tag">Figma</span>
+        <span class="tool-tag">Miro</span>
+        <span class="tool-tag">Adobe XD</span>
+        <span class="tool-tag">InVision</span>
+        <span class="tool-tag">Google Forms</span>
+        <span class="tool-tag">Notion</span>
+        <span class="tool-tag">User Interviews</span>
+        <span class="tool-tag">Usability Testing</span>
+        <span class="tool-tag">Affinity Mapping</span>
+        <span class="tool-tag">Contextual Inquiry</span>
+        <span class="tool-tag">Journey Mapping</span>
+        <span class="tool-tag">Persona Development</span>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:2rem;">
+      <p style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:1rem;">AI-Enhanced Practice <span style="color:var(--accent); margin-left:0.5rem;">✦ Certified</span></p>
+      <div class="tools-grid">
+        <span class="tool-tag">Claude (Anthropic)</span>
+        <span class="tool-tag">ChatGPT</span>
+        <span class="tool-tag">AI-Assisted Synthesis</span>
+        <span class="tool-tag">Prompt Engineering</span>
+        <span class="tool-tag">AI Research Summarisation</span>
+        <span class="tool-tag">AI-Augmented Ideation</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <p class="section-label">Selected Work</p>
+    <h2 class="section-title">Case Studies</h2>
+    <div class="portfolio-grid">
+
+      <a href="tribesave.html" class="project-card">
+        <div class="project-card-img">
+          <img src="https://static.wixstatic.com/media/2969486719904e41854bc9a7773bbd19.jpg" alt="Tribesave app" />
+          <span class="project-card-tag">Fintech · App Design</span>
+        </div>
+        <div class="project-card-body">
+          <h3>Tribesave</h3>
+          <p>Redesigning trust and transparency for stokvel group savings — a culturally rooted fintech solution for collective financial goals.</p>
+          <div class="project-card-meta">
+            <span class="meta-tag">User Research</span>
+            <span class="meta-tag">Usability Testing</span>
+            <span class="meta-tag">Figma</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="life-airlines.html" class="project-card">
+        <div class="project-card-img">
+          <img src="https://static.wixstatic.com/media/11062b_1229cdb86a6e4d2db370f340b9e0632f~mv2.jpeg" alt="Life Airlines app" />
+          <span class="project-card-tag">Travel · App Redesign</span>
+        </div>
+        <div class="project-card-body">
+          <h3>Life Airlines</h3>
+          <p>Designing a mobile-first booking experience for a regional airline with no app — reducing friction from search to confirmation.</p>
+          <div class="project-card-meta">
+            <span class="meta-tag">Interviews</span>
+            <span class="meta-tag">Wireframing</span>
+            <span class="meta-tag">Prototyping</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="barter.html" class="project-card">
+        <div class="project-card-img" style="background: #dce8df; display:flex; align-items:center; justify-content:center;">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="36" stroke="#4a7c5b" stroke-width="2"/>
+            <path d="M25 40 L55 40 M48 33 L55 40 L48 47" stroke="#4a7c5b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M55 30 L25 30 M32 23 L25 30 L32 37" stroke="#c4622d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="project-card-tag">Community · App Design</span>
+        </div>
+        <div class="project-card-body">
+          <h3>SwapCircle</h3>
+          <p>Designing a peer-to-peer bartering app that helps South Africans exchange goods and skills without money — building community through trade.</p>
+          <div class="project-card-meta">
+            <span class="meta-tag">Research</span>
+            <span class="meta-tag">Personas</span>
+            <span class="meta-tag">Prototyping</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="experience-section">
+    <p class="section-label">Background</p>
+    <h2 class="section-title">Experience</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">May 2026</p>
+        <h3 class="timeline-role">Google UX Design Certificate</h3>
+        <p class="timeline-org">Google · Coursera — <a href="https://www.coursera.org/account/accomplishments/specialization/RG49AQ1A0BHP" target="_blank" style="color:var(--accent); font-size:0.8rem;">View Credential ↗</a></p>
+        <p class="timeline-desc">Completed Google's professional UX design programme covering the full design process: empathising with users, defining problems, ideating solutions, prototyping, and usability testing. This certification provided the structured research and design framework applied across all three portfolio case studies.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">2026</p>
+        <h3 class="timeline-role">AI Prompt Engineering Certification</h3>
+        <p class="timeline-org">Forge — Vista Equity Partners</p>
+        <p class="timeline-desc">Completed a certified course in AI prompt engineering, formalising a working practice of integrating AI tools into the UX research process. Applies AI for research synthesis, insight generation, design thinking facilitation, and rapid ideation — using tools like Claude and ChatGPT as thinking partners rather than shortcuts.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">2025</p>
+        <h3 class="timeline-role">Introduction to UI/UX Design</h3>
+        <p class="timeline-org">Alison — <a href="https://alison.com/course/introduction-to-ui-ux-design" target="_blank" style="color:var(--accent); font-size:0.8rem;">View Course ↗</a></p>
+        <p class="timeline-desc">Studied foundational UI/UX principles including user research methods, information architecture, interaction design, and the distinction between UI and UX practice. Complemented the Google certificate with an additional perspective on design fundamentals.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">2022 – 2025</p>
+        <h3 class="timeline-role">Complaints Manager</h3>
+        <p class="timeline-org">OVO Energy Campaign</p>
+        <p class="timeline-desc">Led a complaints management team, synthesising customer feedback patterns across hundreds of cases to identify systemic UX gaps. Translated complaint data into actionable insights for service improvement — effectively running a continuous feedback loop that mirrors UX research practice. Managed escalated cases and coordinated with stakeholders to drive process changes grounded in real user pain points.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">2021 – 2022</p>
+        <h3 class="timeline-role">Customer Service Consultant</h3>
+        <p class="timeline-org">CCI</p>
+        <p class="timeline-desc">Diagnosed and resolved user issues related to meter functionality, billing, and service access. Identified recurring friction points in customer journeys and documented pain points that informed service experience improvements. Developed a practitioner's understanding of how design and process failures surface in real user behaviour.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">2021 – 2022</p>
+        <h3 class="timeline-role">Research Assistant — PSA Martie Project</h3>
+        <p class="timeline-org">University of the Free State</p>
+        <p class="timeline-desc">Conducted contextual inquiry and observational research studying engagement patterns among children with special needs. Documented user behaviours, social interactions, and object engagement in naturalistic settings. Synthesised observations into findings that informed academic conclusions on inclusive learning environments — directly transferable to UX research methodology.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">2020 – 2021</p>
+        <h3 class="timeline-role">Teaching Assistant</h3>
+        <p class="timeline-org">University of the Free State</p>
+        <p class="timeline-desc">Supported academic delivery and student engagement in a Psychology department setting.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">2021</p>
+        <h3 class="timeline-role">Bachelor of Social Sciences</h3>
+        <p class="timeline-org">University of the Free State — Psychology & Criminology</p>
+        <p class="timeline-desc">Graduated with a degree majoring in Psychology and Criminology — a combination that trained me to understand human behaviour, motivation, and decision-making alongside systemic analysis of how people respond to environments and structures. Both disciplines inform how I approach UX research: with empathy for the individual and an eye for the systemic patterns behind their behaviour.</p>
+      </div>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <p class="section-label">Let's Work Together</p>
+    <h2 class="section-title">Get in Touch</h2>
+    <div class="contact-grid">
+      <div class="contact-text">
+        <p>I'm actively looking for UX Research roles, with a particular interest in fintech and products that serve African markets. If you're building something that needs a researcher who understands people — let's talk.</p>
+        <a href="mailto:phiwokuhle.v@icloud.com" class="contact-email">phiwokuhle.v@icloud.com</a>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/phiwokuhle-vilakazi-683ba538b/" target="_blank" class="social-link">LinkedIn</a>
+          <a href="https://www.instagram.com/phiwokuhledarkie/" target="_blank" class="social-link">Instagram</a>
+        </div>
+      </div>
+      <div>
+        <p style="font-family:'Space Mono',monospace; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:1rem;">Based in</p>
+        <p style="font-family:'DM Serif Display',serif; font-size:2rem; color:var(--white); line-height:1.2;">Cape Town,<br />South Africa</p>
+        <p style="margin-top:1.5rem; font-size:0.875rem; color:rgba(255,255,255,0.7); line-height:1.6;">Open to remote opportunities and relocation for the right role.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Phiwo Vilakazi. All rights reserved.</span>
+    <a href="mailto:phiwokuhle.v@icloud.com">phiwokuhle.v@icloud.com</a>
+  </footer>
+
+</body>
+</html>

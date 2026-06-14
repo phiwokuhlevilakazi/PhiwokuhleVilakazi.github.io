@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tribesave — Case Study | Phiwo Vilakazi</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCI+CiAgPCEtLSBCYWNrZ3JvdW5kIC0tPgogIDxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjMWExYTFhIi8+CiAgCiAgPCEtLSBQZXRhbHMgLSB0ZXJyYWNvdHRhIC0tPgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjI4IiByeD0iNyIgcnk9IjE0IiBmaWxsPSIjYzQ2MjJkIiBvcGFjaXR5PSIwLjkiLz4KICA8ZWxsaXBzZSBjeD0iNTAiIGN5PSI3MiIgcng9IjciIHJ5PSIxNCIgZmlsbD0iI2M0NjIyZCIgb3BhY2l0eT0iMC45Ii8+CiAgPGVsbGlwc2UgY3g9IjI4IiBjeT0iNTAiIHJ4PSIxNCIgcnk9IjciIGZpbGw9IiNjNDYyMmQiIG9wYWNpdHk9IjAuOSIvPgogIDxlbGxpcHNlIGN4PSI3MiIgY3k9IjUwIiByeD0iMTQiIHJ5PSI3IiBmaWxsPSIjYzQ2MjJkIiBvcGFjaXR5PSIwLjkiLz4KCiAgPCEtLSBEaWFnb25hbCBwZXRhbHMgLSBzbGlnaHRseSBsaWdodGVyIC0tPgogIDxlbGxpcHNlIGN4PSIzMiIgY3k9IjMyIiByeD0iNyIgcnk9IjE0IiBmaWxsPSIjZDQ3MzNlIiBvcGFjaXR5PSIwLjg1IiB0cmFuc2Zvcm09InJvdGF0ZSg0NSAzMiAzMikiLz4KICA8ZWxsaXBzZSBjeD0iNjgiIGN5PSIzMiIgcng9IjciIHJ5PSIxNCIgZmlsbD0iI2Q0NzMzZSIgb3BhY2l0eT0iMC44NSIgdHJhbnNmb3JtPSJyb3RhdGUoLTQ1IDY4IDMyKSIvPgogIDxlbGxpcHNlIGN4PSIzMiIgY3k9IjY4IiByeD0iNyIgcnk9IjE0IiBmaWxsPSIjZDQ3MzNlIiBvcGFjaXR5PSIwLjg1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNDUgMzIgNjgpIi8+CiAgPGVsbGlwc2UgY3g9IjY4IiBjeT0iNjgiIHJ4PSI3IiByeT0iMTQiIGZpbGw9IiNkNDczM2UiIG9wYWNpdHk9IjAuODUiIHRyYW5zZm9ybT0icm90YXRlKDQ1IDY4IDY4KSIvPgoKICA8IS0tIENlbnRyZSBjaXJjbGUgLS0+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iMTIiIGZpbGw9IiNmN2Y0ZWYiLz4KICAKICA8IS0tIENlbnRyZSBpbml0aWFsIC0tPgogIDx0ZXh0IHg9IjUwIiB5PSI1NSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjEzIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzFhMWExYSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UDwvdGV4dD4KPC9zdmc+Cg==" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --paper: #f7f4ef;
+      --accent: #c4622d;
+      --accent-light: #f0e0d6;
+      --mid: #6b6560;
+      --rule: #e0dbd4;
+      --white: #ffffff;
+      --green: #4a7c5b;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--paper); color: var(--ink); line-height: 1.6; }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.25rem 4rem;
+      background: var(--paper); border-bottom: 1px solid var(--rule);
+    }
+    .nav-logo { font-family: 'Space Mono', monospace; font-size: 1rem; font-weight: 700; letter-spacing: 0.05em; color: var(--ink); text-decoration: none; }
+    .nav-back { font-family: 'Space Mono', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+    .nav-back:hover { color: var(--accent); }
+
+    /* HERO */
+    .case-hero {
+      padding-top: 5rem;
+      background: var(--ink);
+      color: var(--white);
+      padding-bottom: 0;
+    }
+    .case-hero-inner {
+      padding: 5rem 4rem 3rem;
+      max-width: 960px;
+    }
+    .case-tag {
+      font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 1.5rem; display: block;
+    }
+    .case-title {
+      font-family: 'DM Serif Display', serif; font-size: clamp(2.5rem, 5vw, 4rem);
+      color: var(--white); line-height: 1.1; margin-bottom: 1.5rem;
+    }
+    .case-subtitle {
+      font-size: 1.1rem; color: rgba(255,255,255,0.7); max-width: 600px; line-height: 1.75; margin-bottom: 3rem;
+    }
+    .case-meta-row {
+      display: flex; gap: 3rem; flex-wrap: wrap;
+      border-top: 1px solid rgba(255,255,255,0.15); padding-top: 2rem;
+    }
+    .meta-item p:first-child {
+      font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: rgba(255,255,255,0.4); margin-bottom: 0.3rem;
+    }
+    .meta-item p:last-child { font-size: 0.9rem; color: var(--white); font-weight: 500; }
+
+    /* HERO IMAGE */
+    .case-hero-img {
+      width: 100%; max-height: 500px; object-fit: cover; display: block;
+      margin-top: 3rem;
+    }
+
+    /* CONTENT */
+    .case-content { max-width: 800px; margin: 0 auto; padding: 5rem 2rem; }
+
+    .content-section { margin-bottom: 5rem; }
+
+    .content-label {
+      font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.75rem;
+    }
+    .content-heading {
+      font-family: 'DM Serif Display', serif; font-size: 1.75rem; color: var(--ink); margin-bottom: 1.25rem;
+    }
+    .content-body {
+      font-size: 1rem; color: var(--mid); line-height: 1.8; margin-bottom: 1.25rem;
+    }
+
+    /* INSIGHT CARDS */
+    .insight-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem;
+    }
+    .insight-card {
+      background: var(--white); border: 1px solid var(--rule); padding: 1.5rem;
+      border-left: 3px solid var(--accent);
+    }
+    .insight-card .label {
+      font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.5rem;
+    }
+    .insight-card p { font-size: 0.9rem; color: var(--mid); line-height: 1.65; }
+
+    /* QUOTE */
+    .research-quote {
+      background: var(--accent-light); border-left: 4px solid var(--accent);
+      padding: 2rem; margin: 2rem 0;
+    }
+    .research-quote blockquote {
+      font-family: 'DM Serif Display', serif; font-size: 1.35rem; font-style: italic;
+      color: var(--ink); line-height: 1.5; margin-bottom: 0.75rem;
+    }
+    .research-quote cite {
+      font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--mid); font-style: normal;
+    }
+
+    /* PERSONA */
+    .persona-card {
+      background: var(--white); border: 1px solid var(--rule); padding: 2rem; margin-top: 1.5rem;
+    }
+    .persona-header {
+      display: flex; gap: 1.5rem; align-items: flex-start; margin-bottom: 1.5rem;
+    }
+    .persona-avatar {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: var(--accent-light);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: var(--accent);
+      flex-shrink: 0;
+    }
+    .persona-name { font-family: 'DM Serif Display', serif; font-size: 1.3rem; margin-bottom: 0.2rem; }
+    .persona-desc { font-size: 0.85rem; color: var(--mid); }
+    .persona-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .persona-grid-item .label {
+      font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.4rem;
+    }
+    .persona-grid-item ul { list-style: none; }
+    .persona-grid-item li {
+      font-size: 0.85rem; color: var(--mid); padding: 0.25rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .persona-grid-item li:last-child { border-bottom: none; }
+
+    /* ITERATION TABLE */
+    .iteration-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+    .iteration-table th {
+      font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+      text-align: left; padding: 0.75rem 1rem; background: var(--ink); color: var(--white);
+    }
+    .iteration-table td {
+      font-size: 0.875rem; color: var(--mid); padding: 0.875rem 1rem;
+      border-bottom: 1px solid var(--rule); vertical-align: top; line-height: 1.6;
+    }
+    .iteration-table tr:nth-child(even) td { background: var(--white); }
+    .badge {
+      display: inline-block; font-family: 'Space Mono', monospace; font-size: 0.6rem;
+      letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2rem 0.6rem;
+    }
+    .badge-worked { background: #d4edda; color: #2d6a3f; }
+    .badge-didnt { background: #fde8e0; color: #a33; }
+    .badge-improved { background: #dce8df; color: #2d6a3f; }
+
+    /* WIREFRAME */
+    .wireframe-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem;
+    }
+    .wireframe-item img { width: 100%; border: 1px solid var(--rule); display: block; }
+    .wireframe-item p {
+      font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.05em;
+      color: var(--mid); text-align: center; margin-top: 0.5rem;
+    }
+
+    /* KEY LEARNINGS */
+    .learning-list { list-style: none; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+    .learning-list li {
+      display: flex; gap: 1rem; align-items: flex-start;
+      font-size: 0.95rem; color: var(--mid); line-height: 1.65;
+    }
+    .learning-num {
+      font-family: 'Space Mono', monospace; font-size: 0.8rem; font-weight: 700;
+      color: var(--accent); flex-shrink: 0; padding-top: 0.1rem;
+    }
+
+    /* NEXT PROJECT */
+    .next-project {
+      background: var(--ink); padding: 4rem;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 2rem;
+    }
+    .next-project p {
+      font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(255,255,255,0.4); margin-bottom: 0.5rem;
+    }
+    .next-project h3 { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--white); }
+    .btn-primary {
+      display: inline-block; background: var(--accent); color: var(--white);
+      padding: 0.85rem 2rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; text-decoration: none; transition: background 0.2s;
+    }
+    .btn-primary:hover { background: #a8501f; }
+
+    footer {
+      background: var(--ink); color: var(--mid); padding: 2rem 4rem;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.8rem; font-family: 'Space Mono', monospace;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      nav { padding: 1.25rem 1.5rem; }
+      .case-hero-inner { padding: 5rem 1.5rem 2rem; }
+      .case-content { padding: 3rem 1.5rem; }
+      .insight-grid { grid-template-columns: 1fr; }
+      .persona-grid { grid-template-columns: 1fr 1fr; }
+      .wireframe-row { grid-template-columns: 1fr; }
+      .next-project { padding: 3rem 1.5rem; }
+      footer { flex-direction: column; gap: 0.5rem; padding: 2rem 1.5rem; text-align: center; }
+      .case-meta-row { gap: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">P·V</a>
+    <a href="index.html" class="nav-back">← Back to Portfolio</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="case-hero">
+    <div class="case-hero-inner">
+      <span class="case-tag">Case Study 01 — Fintech · App Design</span>
+      <h1 class="case-title">Tribesave: Redesigning Trust in Group Savings</h1>
+      <p class="case-subtitle">Stokvel savings groups are a cornerstone of South African financial culture — yet they run almost entirely on trust and paperwork. Tribesave set out to change that without eroding the human connection at the heart of collective saving.</p>
+      <div class="case-meta-row">
+        <div class="meta-item"><p>Role</p><p>UX Research & Design</p></div>
+        <div class="meta-item"><p>Methods</p><p>Interviews · Usability Testing · Surveys</p></div>
+        <div class="meta-item"><p>Tools</p><p>Figma · Miro · Google Forms</p></div>
+        <div class="meta-item"><p>Duration</p><p>6 Weeks</p></div>
+      </div>
+    </div>
+    <img class="case-hero-img" src="https://static.wixstatic.com/media/2969486719904e41854bc9a7773bbd19.jpg" alt="Tribesave app screens" />
+  </div>
+
+  <!-- CONTENT -->
+  <div class="case-content">
+
+    <!-- THE PROBLEM -->
+    <div class="content-section">
+      <p class="content-label">The Problem</p>
+      <h2 class="content-heading">When trust breaks down, so does the group</h2>
+      <p class="content-body">Stokvel groups in South Africa pool money collectively — but disputes, missed contributions, and a lack of shared visibility frequently cause them to collapse. The problem isn't that people don't want to save together. It's that there's no infrastructure to make transparency easy and trust visible.</p>
+      <p class="content-body">The challenge was to design a digital experience that preserved the warmth and social fabric of stokvel culture while solving the transparency and accountability gaps that cause groups to fracture.</p>
+    </div>
+
+    <!-- RESEARCH -->
+    <div class="content-section">
+      <p class="content-label">User Research</p>
+      <h2 class="content-heading">What I set out to understand</h2>
+      <p class="content-body">Before touching a wireframe, I needed to understand the real texture of stokvel participation — not just the pain points, but the emotional stakes. Group savings is as much about belonging as it is about money.</p>
+
+      <p class="content-body"><strong>Research questions driving the study:</strong></p>
+      <div class="insight-grid">
+        <div class="insight-card">
+          <p class="label">Question 1</p>
+          <p>How do stokvel members currently track contributions and group progress — and where does the process break down?</p>
+        </div>
+        <div class="insight-card">
+          <p class="label">Question 2</p>
+          <p>What makes members feel confident that their money is safe and being managed fairly?</p>
+        </div>
+        <div class="insight-card">
+          <p class="label">Question 3</p>
+          <p>How does visual impairment or limited digital literacy affect participation in a digital savings experience?</p>
+        </div>
+        <div class="insight-card">
+          <p class="label">Question 4</p>
+          <p>What motivates continued participation in a group goal — and what causes members to disengage?</p>
+        </div>
+      </div>
+
+      <br />
+      <p class="content-body"><strong>Methodology:</strong> I conducted 5 qualitative interviews (including 2 participants with visual impairment), followed by structured surveys at the end of usability testing sessions. Secondary research via fintech articles on informal savings in South Africa provided broader context.</p>
+    </div>
+
+    <!-- KEY FINDINGS -->
+    <div class="content-section">
+      <p class="content-label">Key Findings</p>
+      <h2 class="content-heading">What participants told me — and what they showed me</h2>
+
+      <div class="research-quote">
+        <blockquote>"I never really know where the money is until the end. I just have to trust the organiser."</blockquote>
+        <cite>— Interview participant, stokvel member of 3 years</cite>
+      </div>
+
+      <div class="research-quote">
+        <blockquote>"If I could see a running total for the group on my phone — like a shared progress bar — I'd feel much more motivated to contribute on time."</blockquote>
+        <cite>— Interview participant, first-time stokvel member</cite>
+      </div>
+
+      <p class="content-body">Three core themes emerged across interviews:</p>
+
+      <div class="insight-grid">
+        <div class="insight-card">
+          <p class="label">Finding 1 — Transparency Gap</p>
+          <p>Members had limited visibility into the group's real-time financial state. Most relied on a single organiser with no shared record system, creating information asymmetry and low trust.</p>
+        </div>
+        <div class="insight-card">
+          <p class="label">Finding 2 — Motivation Dip</p>
+          <p>Engagement dropped significantly in the middle phase of a savings cycle when progress wasn't visible. Members who couldn't see collective progress felt their individual contribution was invisible too.</p>
+        </div>
+        <div class="insight-card">
+          <p class="label">Finding 3 — Accessibility Barrier</p>
+          <p>Participants with visual impairment relied heavily on screen readers but found most fintech apps used icon-only navigation with no accessible labels — a critical design gap.</p>
+        </div>
+        <div class="insight-card">
+          <p class="label">Finding 4 — Friction in Onboarding</p>
+          <p>New members found it intimidating to join a group mid-cycle with no context. A guided, step-by-step onboarding that surfaced group history reduced this anxiety significantly in testing.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PERSONAS -->
+    <div class="content-section">
+      <p class="content-label">User Personas</p>
+      <h2 class="content-heading">Who I was designing for</h2>
+
+      <div class="persona-card">
+        <div class="persona-header">
+          <div class="persona-avatar">N</div>
+          <div>
+            <p class="persona-name">Nomsa, 34</p>
+            <p class="persona-desc">Marketing coordinator · Cape Town · Experienced stokvel organiser</p>
+          </div>
+        </div>
+        <div class="persona-grid">
+          <div class="persona-grid-item">
+            <p class="label">Goals</p>
+            <ul>
+              <li>Reduce admin burden of tracking contributions</li>
+              <li>Keep group members motivated and informed</li>
+              <li>Build a savings record she can show a bank</li>
+            </ul>
+          </div>
+          <div class="persona-grid-item">
+            <p class="label">Frustrations</p>
+            <ul>
+              <li>Chasing members for late contributions</li>
+              <li>Disputes about who paid what and when</li>
+              <li>No digital trail for group finances</li>
+            </ul>
+          </div>
+          <div class="persona-grid-item">
+            <p class="label">Behaviours</p>
+            <ul>
+              <li>Uses WhatsApp to manage group communication</li>
+              <li>Writes contribution records in a notebook</li>
+              <li>Comfortable with mobile apps</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="persona-card" style="margin-top:1.5rem;">
+        <div class="persona-header">
+          <div class="persona-avatar" style="background:#dce8df; color: #4a7c5b;">T</div>
+          <div>
+            <p class="persona-name">Thabo, 28</p>
+            <p class="persona-desc">Warehouse supervisor · Johannesburg · First-time stokvel member, visual impairment</p>
+          </div>
+        </div>
+        <div class="persona-grid">
+          <div class="persona-grid-item">
+            <p class="label">Goals</p>
+            <ul>
+              <li>Save consistently without relying on reminders</li>
+              <li>Navigate the app independently</li>
+              <li>Understand group progress without asking</li>
+            </ul>
+          </div>
+          <div class="persona-grid-item">
+            <p class="label">Frustrations</p>
+            <ul>
+              <li>Icon-only navigation without labels</li>
+              <li>Poor screen-reader compatibility</li>
+              <li>Feeling excluded from group conversations</li>
+            </ul>
+          </div>
+          <div class="persona-grid-item">
+            <p class="label">Behaviours</p>
+            <ul>
+              <li>Uses VoiceOver daily on iPhone</li>
+              <li>Prefers audio confirmation of actions</li>
+              <li>Relies on step-by-step guidance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TESTING & ITERATION -->
+    <div class="content-section">
+      <p class="content-label">Testing & Iteration</p>
+      <h2 class="content-heading">What usability testing revealed</h2>
+      <p class="content-body">I ran usability tests with participants across both low and high fidelity prototypes, asking them to complete key tasks: creating a savings group, inviting members, and making a contribution. The results shaped three major iteration rounds.</p>
+
+      <table class="iteration-table">
+        <thead>
+          <tr>
+            <th>Finding</th>
+            <th>Status</th>
+            <th>Action Taken</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Users responded positively to visible group progress — a shared progress bar was described as "motivating" by 4 of 5 participants</td>
+            <td><span class="badge badge-worked">Worked</span></td>
+            <td>Kept and amplified — made the progress bar the primary home screen element</td>
+          </tr>
+          <tr>
+            <td>Clear contribution tracking per member increased confidence in the group's transparency</td>
+            <td><span class="badge badge-worked">Worked</span></td>
+            <td>Retained — added individual contribution history view accessible to all members</td>
+          </tr>
+          <tr>
+            <td>Some users found the group creation flow had too many steps in sequence, causing drop-off before completion</td>
+            <td><span class="badge badge-didnt">Didn't Work</span></td>
+            <td>Restructured into chunked stages with a progress indicator and the ability to save and return</td>
+          </tr>
+          <tr>
+            <td>Navigation labels were absent on several key screens, making screen reader navigation impossible for Thabo</td>
+            <td><span class="badge badge-didnt">Didn't Work</span></td>
+            <td>Added accessible labels to all interactive elements; tested with VoiceOver after each iteration</td>
+          </tr>
+          <tr>
+            <td>System feedback was unclear after completing a contribution — users weren't sure the action had registered</td>
+            <td><span class="badge badge-didnt">Didn't Work</span></td>
+            <td>Added explicit confirmation screens with animation and a summary of the contribution made</td>
+          </tr>
+          <tr>
+            <td>Invitation flow to add group members was unfamiliar — users expected a contacts picker, not a manual entry field</td>
+            <td><span class="badge badge-improved">Improved</span></td>
+            <td>Redesigned invite flow to pull from phone contacts with a manual entry fallback</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- WIREFRAMES -->
+    <div class="content-section">
+      <p class="content-label">Design Output</p>
+      <h2 class="content-heading">From low to high fidelity</h2>
+      <p class="content-body">The wireframes moved through two phases: a low-fidelity paper prototype to test flow and structure, and a high-fidelity Figma prototype to test visual hierarchy, interaction, and accessibility.</p>
+      <div class="wireframe-row">
+        <div class="wireframe-item">
+          <img src="https://static.wixstatic.com/media/43a5bc_cc15938c2d944c7e96a4f3149397656a~mv2.png" alt="Tribesave low fidelity wireframe" />
+          <p>Low fidelity — user flow mapping</p>
+        </div>
+        <div class="wireframe-item">
+          <img src="https://static.wixstatic.com/media/43a5bc_d9537ecf9ead46e4b21dffacda19591d~mv2.png" alt="Tribesave high fidelity wireframe" />
+          <p>High fidelity — visual design & prototype</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEARNINGS -->
+    <div class="content-section">
+      <p class="content-label">Key Learnings</p>
+      <h2 class="content-heading">What this project taught me</h2>
+      <ul class="learning-list">
+        <li><span class="learning-num">01</span><span>Guided, step-by-step onboarding significantly reduces friction for first-time users in unfamiliar financial contexts — not because they can't handle complexity, but because the stakes feel high and they want to feel held by the system.</span></li>
+        <li><span class="learning-num">02</span><span>Visual progress tracking is a motivational tool, not just a UI pattern. Seeing the group's collective progress made participants feel their individual contribution was meaningful — which directly increased self-reported likelihood of on-time payment.</span></li>
+        <li><span class="learning-num">03</span><span>Designing for accessibility from the start — not as an afterthought — changed the design for the better for everyone. Clearer labels, better confirmation states, and structured navigation improved the experience for all five participants, not just those with visual impairment.</span></li>
+        <li><span class="learning-num">04</span><span>Cultural context shapes how users interpret digital trust signals. In a stokvel context, transparency doesn't just mean showing numbers — it means surfacing the human accountability behind them.</span></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- NEXT PROJECT -->
+  <div class="next-project">
+    <div>
+      <p>Next Case Study</p>
+      <h3>Life Airlines</h3>
+    </div>
+    <a href="life-airlines.html" class="btn-primary">View Project →</a>
+  </div>
+
+  <footer>
+    <span>© 2026 Phiwo Vilakazi</span>
+    <a href="index.html">← Back to Portfolio</a>
+  </footer>
+
+</body>
+</html>
